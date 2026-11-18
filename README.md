@@ -38,6 +38,9 @@ The first fixture follows setup, patrol, approach, follow, return and renewed pa
 ```text
 assets/       Public simulation overview
 docs/         Evidence scope and reproducibility boundary
+examples/     Synthetic event fixtures for offline state replay
+tests/        Offline finite-state transition tests
+tools/        Offline state replay CLI (replay_states.py)
 ```
 
 ## Reuse
