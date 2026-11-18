@@ -21,6 +21,18 @@ The archived simulator controller distinguishes five runtime states. Initializat
 
 The included figure documents the intended simulation integration. The work demonstrates SITL, ROS, MAVROS, and Python-controller integration. It does **not** claim real-world flight performance, vision-detector completion, collision safety, or field validation. See [docs/evidence.md](docs/evidence.md).
 
+## Replay the documented state transitions
+
+With Python 3.10 or later, run:
+
+~~~bash
+python tools/replay_states.py
+python tools/replay_states.py examples/target_lost.json
+python -m unittest discover -s tests -v
+~~~
+
+The first fixture follows setup, patrol, approach, follow, return and renewed patrol. The second verifies that the state returns to patrol after a lost simulated observation. The offline replay validates state transitions against synthetic events. It uses no ROS installation, PX4 connection, flight commands, or real vehicle telemetry.
+
 ## Repository layout
 
 ```text

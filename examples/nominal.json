@@ -1,0 +1,7 @@
+[
+  "setup_complete",
+  "simulated_target_seen",
+  "response_triggered",
+  "response_finished",
+  "return_reached"
+]
